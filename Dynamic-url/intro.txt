@@ -1,4 +1,42 @@
+1> req.query
+
+    base_url?naam=gautam&age=24
+
+    -> anything after '?' is a key value pair that is attached to req.query object. This is universal property of http get requests
+       and not specific to any framework.
+
+
+
+
+
 * dynamic binding is done using ':'
+
+How req.params Works
+
+* All the frameworks need this functionality and have their own way of doing it, req.params is specific to express.
+When you define a route in Express, you can create dynamic placeholders in the URL path by using a colon (:) before the parameter name. These placeholders allow you to capture values directly from the URL.
+
+For example:
+
+    /user/:id
+    /product/:productId
 
 like if it is  xyz/:id 
 -> xyz is base url, and after that their will be random thing, which we are giving name as "id", it can be anything.
+-> how it works is, that for any url , express attaches a "params" property, with value emepty object, and whatever u take as dynamic route like 
+   "id" in this case is attached to that object. And this is not limited to first dynamic path only, BUT u can put as many dynamic path, and all
+    will be attached to req.params WITHOUT NESTING.
+
+    eg:-   base-url/:first_id/:second_id
+
+    so, req.parms = {
+        first_id : _value_,
+        second_id : _value_
+    }
+
+    In this way we can access all the parameters easily.
+
+    * suppose we were not using req.params, then we can't use get method bcz of security reason. Hence we needed to
+      use post request, which  we used in case of req.params also. BUT we got a good trick here to directly wrap the button
+      inside form and make button type submit , so we can directly send request to api, without creating extra function to 
+      send api request.

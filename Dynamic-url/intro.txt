@@ -1,0 +1,4 @@
+* dynamic binding is done using ':'
+
+like if it is  xyz/:id 
+-> xyz is base url, and after that their will be random thing, which we are giving name as "id", it can be anything.

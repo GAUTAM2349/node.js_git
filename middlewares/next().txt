@@ -1,0 +1,16 @@
+
+* If we don't call next() in a middleware request will not pass to next expected middleware or even route, and it will keep loading in client side,
+  because response has been not ended manually, inside middleware.
+
+
+* In vanilla node.js, res.write() sends the respone but doesn't end it, so multiple response( WRONG , NOT MULTIPLE RESPONSE, BUT MULTIPLE CHUNKS OF DATA,
+  THEIR IS ONLY ONE RESPONSE FOR ONE REQUEST) can be send , and the response needs to be manually ended using res.end() method.
+
+* In Express, using methods like res.send(), res.json(), or res.sendStatus() automatically ends the response.
+
+* In Express, if you want to send multiple chunks of data, you can still use res.write() and manually call res.end() to end the response.
+  This is useful for streaming data. In Express, you can send multiple chunks of data using res.write() and res.end(),
+   but not multiple responses (only one response per request).
+
+* When we make a request it might pass through many middlewares, but where it finally goes is called endpoint.  
+*  

@@ -1,0 +1,45 @@
+* Inside mongodb, we have different databases. Thes databases have different collections (similar to table in rdbms).
+  Like records for each row in table in rdbms, here each row( just to understand ) or new inserted data is call 
+  DOCUMENT. These documents are in Bson( binary json ) format. Each property is called field ( column in rdbms ).
+
+* In rdbms, their is fixed schema for a table, and if a column is defined in schema then all the rows or records will
+  have that column, but this is not case in mongodb. Documents of same collections can have different fields.
+
+*  While MongoDB allows documents with different structures, using Mongoose schemas ensures that your documents
+   have a consistent shape and follow certain rules.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Index: An optional data structure that speeds up data retrieval.
+Replica Set: A set of MongoDB servers providing data redundancy and high availability.
+Sharding: Distribution of data across multiple servers for horizontal scalability.
+Aggregation: A feature that allows complex data processing, including filtering, grouping, and transformations.

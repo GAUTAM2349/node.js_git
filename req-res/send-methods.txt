@@ -1,0 +1,2 @@
+* res.render() is used to render dynamic views/templates with data (using a templating engine like EJS or Pug).
+* res.sendFile() is used to send static files (like HTML, CSS, or images) directly to the client without any processing.

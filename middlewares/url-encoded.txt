@@ -1,0 +1,20 @@
+* when a form data is sent to server using get method, those inputs are appended in url
+  as query, and these are present in 'query' property of request object.
+
+* But when same is done with post method, data is not sent as query in url. Which means we cannot directly acces
+  using property of req object. We will have to manually collect upcoming data , using req.on() method, with
+  events, {data, end, error} (which we saw in sharpener first module).
+
+* By default form data is sent in url-encoded format, which uses '+' for spaces and '?' for separating
+  fields.
+
+* But data can come in json format also, and other formats also.
+
+* So main pbm is that we don't have direct way to get data if post method is used, we will have do manually
+  get it, and also for different format of data coming, how would we handle it, will also change. 
+
+* we use express.urlEncoded( {extend : true}) to overcome this manual process, and append upcoming data by attaching
+  another property 'body' which is not present in req by default and putting the payload in this field.
+  So primarily, this helps us to not manually write logic ( using req.on() ) and get it done automatically.
+
+* Similarly we have express.json() middleware to do same thing , but if data coming is in json format.

@@ -1,0 +1,2 @@
+* You use result.data because it contains the actual data returned from the server,
+  while result includes additional metadata like status codes and headers that are usually unnecessary.

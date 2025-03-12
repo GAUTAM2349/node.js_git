@@ -1,0 +1,9 @@
+* It is an architectural pattern 
+* scalability
+
+
+* many routes might have common logic, so writing same code again and again.
+    To avoid this we use controllers, also in large application it aids, maintainability,
+    and modularity and eventually reusability.
+
+* for example their can crud operation on different routes which need same data.
